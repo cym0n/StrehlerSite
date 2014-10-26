@@ -1,0 +1,62 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 WHAT'S GOING ON
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+	<div class="twelve columns">
+        <div class="eight columns noleftmargin">
+             [% FOREACH n IN news %]
+			 <div class="circledate">
+                <div class="textcircle">
+                    [% n.publish_date.strftime('- %d -<br />%B<br />%Y') %]
+			    </div>
+			 </div>
+			 <h4>[% n.title %]</h4>
+			 <div class="dots blogdots">
+			 </div>
+             [% n.text %]
+             <div class="hr">
+			 </div>
+             [% END %]
+             <br/>
+             [% IF last_page != 1 %]
+			 <ul class="pagination">
+                [% p = 1 %]
+				<li class="arrow [% IF page == 1 %]unavailable[% END %]"><a href="/news?page=[% page - 1 %]">&laquo;</a></li>
+                
+                [% WHILE p <= last_page %]
+                [% IF p == page %]
+				<li class="current"><a href="#">[% p %]</a></li>
+                [% ELSE %]
+				<li><a href="/news?page=[% p %]">[% p %]</a></li>
+                [% END %]
+                [% p = p + 1 %]
+                [% END %]
+				<li class="arrow [% IF page == last_page %]unavailable[% END %]"><a href="/news?page=[% page + 1 %]">&raquo;</a></li>
+			</ul>
+            [% END %]
+		</div>
+		<!-- SIDEBAR -->
+		<div class="four columns">
+        	<h5 class="sidebartitle">RELEASES</h5>
+            [% FOREACH r IN releases %]
+			<p>
+				<h6>[% r.publish_date.strftime('%d-%m-%Y') %] - [% r.title %]</h6>
+			</p>
+			<p>
+                [% r.text %]
+		    </p>
+            [% END %]
+        </div>
+	</div>
+</div>
+<div class="hr">
+</div>
+

@@ -1,0 +1,60 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 ABOUT STREHLER
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>A nerdy CMS</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>
+	        Perl world is full of good software that can be used for many things, but i think that there're very few tools that give you out-of-the-box components that you can just use while thinking about the features you care. This is really painfully in an environment like web, where a lot of people just seek something to install and use without problems.
+	    </p>
+        <p>Strehler is designed to give you a complete backoffice to administrate generic purpose objects on a website, so that you can create contents using it and then publish them on your site in the way you like.</p>
+        <p>I know, this definition could appear a little generic so let me clarify what Strehler <strong>is not</strong>.</p>
+        <h5>Strehler is not a complete product</h5>
+        <p>Strehler is not a complete product like <a href="http://www.wordpress.com">Wordpress</a> or <a href="http://joomla.com">Joomla!</a>. It can be used to manage articles and images. It can classify articles and images using categories and tags, but there's no frontend in this software that will display your contents. Strehler is just a backend.<p>
+        <h5>Strehler is not a smart representation of your database</h5>
+        <p><a href="https://www.djangoproject.com/">Django Admin</a> was an inspiration for my work, but the result is very different. Streheler does many abstractions about its database giving you high-level features about manipulating contents and hiding low-level aspects about their structure. Also, at this point of development Strehler doesn't do any introspection on the models you use so it can't automatically generate forms or management functions. It can help you doing something similar in a very fast way, but it's a different tool.</p>
+        <h5>Strehler is not a framework</h5>
+        <p><a href="http://search.cpan.org/~xsawyerx/Dancer2-0.11/lib/Dancer2.pm">Dancer2</a> is a framework and I used it to create my piece of software. You decide to use Strehler because you already decided to use Dancer2 to build your website. After Strehler installation you keep all Dancer2 features and capabilities, you just add to them the ones coming with Strehler.</p>
+        <h5>In conclusion...</h5>
+        <p>So, Strehler is just a backend where you can write and manage contents (texts and images), multilanguage contents if you need them. It's just one half of the site you're thinking about, but you can take that half as already done and work only on the other one.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <div class="sectiontitle">
+	        <h4>Dancer2: the Framework</h4>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>I will not say too many words about <a href="http://search.cpan.org/~xsawyerx/Dancer2-0.11/lib/Dancer2.pm">Dancer2</a>. It's just one of the most smart and clever MVC framework written in perl on the stage today. I chose it as my framework when I want to write a site with perl, so I naturally wrote Strehler on top of it.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+       	<div class="sectiontitle">
+			<h4>Giorgio Strehler: the Artist</h4>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <p class="eight columns">
+        The name of the software is just a joke. <a href="http://en.wikipedia.org/wiki/Giorgio_Strehler">Giorgio Strehler</a> was an important italian threatre director. I thought he was the right man to manage a Dancer! And remember that i'm italian, so I wanted a bit of italian pride in my project.
+    </p>
+    <img style="max-width:280px" class="four columns" src="/images/strehlerN.jpg" />
+</div>

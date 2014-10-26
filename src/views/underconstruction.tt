@@ -1,0 +1,24 @@
+<style>
+    .noslide h3 {
+        color: #000;
+    }
+</style>
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 [% title %]
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr"></div>
+<div class="row">
+    <div class="twelve columns">
+        <div class="noslide">
+            <h2>Under construction</h2>
+            <h3>This section of the site is under construction.</h3>
+            <h3>[% subtitle %]</h3>
+        </div>
+    </div>
+</div>

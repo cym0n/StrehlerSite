@@ -1,0 +1,113 @@
+.navbar .navbar-inner .nav .user
+{
+    border-right: 2px solid;
+}
+.navbar .navbar-inner .nav .first-admin
+{
+    border-left: 2px solid;
+}
+.navbar .navbar-inner .nav .user .user-toggle
+{
+    color: #ed0000;
+}
+.homepage p
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.error-msg
+{
+    font-weight: bold;
+    color: #ED0000;
+}
+.divider
+{
+    height: 10px;
+}
+.grey
+{
+    background: #D3D3D3;
+}
+.inlist-icon
+{
+    margin-top: 4px;
+    margin-left: 12px;
+}
+table th .ordered
+{
+    margin-left: 8px;
+    margin-top: 8px;
+}
+table th .asc
+{
+    border-top-width: 0;
+    border-bottom: 4px solid #000000;
+}
+.articlelist .thumbnail img
+{
+    height: 80px;
+}
+.articlelist .row
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.articlelist .elementID
+{
+    font-size:30px;
+    padding-top: 20px;
+}
+.article .label
+{
+    margin-bottom: 10px;
+}
+.categorylist .categoryadd div
+{
+    display: inline-block;
+}
+.categorylist .categoryadd button
+{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#tags-place
+{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+#tags-place span
+{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#footer
+{
+    margin-top: 30px;
+}
+.parent_category
+{
+    background: #eee;
+}
+.table .sub_category
+{
+    padding-left: 40px;
+}
+.order-widget div
+{
+    display: inline-block;
+}
+.order-widget button
+{
+    margin-bottom: 12px;
+}
+.btn-tools
+{
+    margin-bottom: 7px;
+}
+.slug
+{
+    color: #8d8d8d;
+}
+

@@ -1,0 +1,153 @@
+<div id="subheader" class="subheadertext">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="noslide">
+				 <h1>Strehler CMS</h1>
+				<h3>A light-weight, nerdy, smart CMS in perl based on Perl Dancer2 framework.</h3>
+			<div class="minipause"></div><br/>
+			<a href="#" class="clear actbutton">Fork me on GitHub</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ANIMATED COLUMNS 
+================================================== -->
+<div class="row">
+	<div class="twelve columns">
+		<ul class="ca-menu">
+			<li>
+			<a href="#claim1">
+			<span class="ca-icon">F</span>
+			<div class="ca-content">
+				<h2 class="ca-main">Easy to install</h2>
+				<h3 class="ca-sub">Let the machine do the work</h3>
+			</div>
+			</a>
+			</li>
+          	<li>
+			<a href="#claim2">
+			<span class="ca-icon">H</span>
+			<div class="ca-content">
+				<h2 class="ca-main">Easy to configure</h2>
+				<h3 class="ca-sub">Many parameters to set</h3>
+			</div>
+			</a>
+			</li>
+			<li>
+			<a href="#claim3">
+			<span class="ca-icon">U</span>
+			<div class="ca-content">
+				<h2 class="ca-main">Easy to use</h2>
+				<h3 class="ca-sub">User-friendly interface</h3>
+			</div>
+			</a>
+			</li>
+			<li>
+			<a href="#claim4">
+			<span class="ca-icon">R</span>
+			<div class="ca-content">
+				<h2 class="ca-main">Easy to extend</h2>
+				<h3 class="ca-sub">Open architecture</h3>
+			</div>
+			</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+	<div class="twelve columns">
+		<div class="centersectiontitle">
+			<h4>The power of Strehler</h4>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+        <a name="claim1"><h5>Easy to install</h5></a>
+		<p>
+        Strehler can be easly fetched from CPAN. After package installation, you'll be able to use strehler script to make your Dancer2 project a Strehler project. Strehler script will create needed database tables and will inject static resources where your webserver will search them.
+		</p>
+		<p>
+			<a href="http://search.cpan.org/dist/Strehler/" target="_blank" class="readmore">See Strehler on CPAN</a>
+		</p>
+	</div>
+	<div class="six columns">
+        <a name="claim2"><h5>Easy to configure</h5></a>
+		<p>
+            You can change many parameters of your Strehler installation just manipulating the config file of your Dancer2 project. When starting, Strehler read a lot of information from it to behave as you need.
+        </p>
+		<p>
+			<a target="_blank" href="http://search.cpan.org/dist/Strehler/lib/Strehler/Manual/Configuration.pod" class="readmore">Read the documentation about configuration</a>
+		</p>
+	</div>
+</div>
+<div class="row">
+    <div class="six columns">
+        <a name="claim3"><h5>Easy to use</h5></a>
+        <p>
+            Strehler will provide your users with a minimal, user-friendly interface to write and manage contents. 
+		</p>
+		<p>
+			<a href="#" class="readmore">Read user's manual</a>
+		</p>
+	</div>
+   	<div class="six columns">
+        <a name="claim4"><h5>Easy to extend</h5></a>
+        <p>
+            The &quot;Entity System&quot; gives you tools to create your own objects and to shape the information as you like. Strehler will generate in a near-automatic way all you need to manage them!
+		</p>
+		<p>
+			<a href="#" class="readmore">Read tech's manual</a>
+		</p>
+	</div>
+
+</div>
+<div class="hr">
+</div>
+[% if news.text %]
+<div class="row">
+	<div class="twelve columns">
+		<div class="centersectiontitle">
+			<h4>News</h4>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+            <div class="panel">
+                <h5>[% news.title %]</h5>
+                <h5>[% news.publish_date.strftime('%d-%m-%Y') %]</h5>
+                [% news.text %]
+                <p class="text-right">
+	   	        <a href="/news" class="readmore">See all news</a>
+	            </p>
+            </div>
+    </div>
+</div>
+[% END %]
+[% IF release.title %]
+<div class="row">
+    <div class="twelve columns">
+		<div class="centersectiontitle">
+			<h4>Latest release</h4>
+		</div>
+	</div>
+    <div class="three columns">
+        <img src="images/camel.png" />
+    </div>
+	<div class="six columns">
+		<div>
+            <h5>[% release.publish_date.strftime('%d-%m-%Y') %] - [% release.title %]</h5>
+            [% release.text %]
+	    	<p>
+		    	<a href="/news" class="readmore">See all releases</a>
+		    </p>
+        </div>
+	</div>
+    <div class="three columns">
+        <img src="images/camel.png" />
+    </div>
+</div>
+[% END %]

@@ -1,0 +1,26 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 TODO
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>Strehler can be used for projects of many scales.</p>
+        <p>This doesn't mean that Strehler is completed, a lot of work is still to do and i'm writing this page also to see if someone wants to help.</p>
+
+    </div>
+</div>
+[% FOREACH t in todo %]
+<div class="row">
+    <div class="twelve columns">
+        <h4>[% t.title %]</h4>
+        [% t.text %]
+    </div>
+</div>
+[% END %]

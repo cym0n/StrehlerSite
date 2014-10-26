@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width"/>
+<title>[% page_title %]</title>
+<meta name="description" content="[% page_description %]">
+<!-- Included CSS Files-->
+<link rel="stylesheet" href="stylesheets/style.css">
+[% IF adhoc_stylesheet %]
+<link rel="stylesheet" href="stylesheets/[% adhoc_stylesheet %].css"><!-- homepage stylesheet -->
+[% END %]
+[% IF sitecolor %]
+<link rel="stylesheet" href="stylesheets/skins/[% sitecolor %].css"><!-- skin color -->
+[% ELSE %]
+<link rel="stylesheet" href="stylesheets/skins/red.css"><!-- skin color -->
+[% END %]
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<link rel="stylesheet" href="stylesheets/custom.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->    
+</head>
+<body>
+<div class="row">	
+		<div class="four columns">
+			<div class="logo">
+				<a href="/"><h4>Strehler CMS</h4></a>
+			</div>
+		</div>
+		<div class="eight  columns noleftmarg">		
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+				
+					<li class="current">
+					    <a href="/">Home</a>
+					</li>
+					
+					<li>
+					    <a href="/about">About</a>
+					</li>
+					
+					<li>
+					    <a href="/news">What's going on</a>
+					</li>
+					
+					<li>
+					    <a href="/users-manual">User's Manual</a>
+					</li>
+					
+					<li>
+					    <a href="/tech-manual">Tech Manual</a>
+					</li>
+					
+					<li>
+					    <a href="/todo">TODO</a>
+					</li>
+					
+				</ul>
+			</nav>
+		</div>	
+</div>
+<div class="clear">
+</div>
+[% content %]
+<!--div id="footer">
+	<footer class="row">
+	<p class="back-top floatright">
+		<a href="#top"><span></span></a>
+	</p>
+    </footer>
+</div -->
+<div id="footer" class="copyright">
+	<div class="row">
+        <p class="back-top floatright">
+		    <a href="#top"><span></span></a>
+        </p>
+		<div class="twelve columns">
+            <div class="small floatleft">
+                Template: "Studio Francesca" - <a href="http://www.WowThemes.net">WowThemes.net</a><br />
+                Framework: <a href="http://search.cpan.org/dist/Dancer2/">Perl Dancer2</a><br />
+                Backend: Strehler!
+            </div>
+		</div>
+	</div>
+</div>
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="javascripts/foundation.min.js"></script> 
+<script src="javascripts/jquery.carouFredSel-6.0.5-packed.js"></script>
+<script src="javascripts/jquery.cycle.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/modernizr.foundation.js"></script>
+<script src="javascripts/slidepanel.js"></script>
+<script src="javascripts/scrolltotop.js"></script>
+<script src="javascripts/hoverIntent.js"></script>
+<script src="javascripts/superfish.js"></script>
+<script src="javascripts/responsivemenu.js"></script>
+<script src="javascripts/jquery.tweet.js"></script>
+<script src="javascripts/twitterusername.js"></script>
+</body>
+</html>
