@@ -6,6 +6,11 @@ our $VERSION = '1.0';
 
 set layout => 'main';
 
+hook before_template_render => sub {
+        my $tokens = shift;
+        $tokens->{'google_monitor'} = config->{'google_monitor'};
+    };
+
 get '/' => sub {
     my $news = StrehlerSite::Element::MarkdownArticle->get_last_by_date('news', 'en');
     my %news_data = ();
