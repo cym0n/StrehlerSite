@@ -37,7 +37,7 @@ get '/about' => sub {
 };
 get '/news' => sub {
     my $page = params->{page} || 1;
-    my $releases = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => -1, category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'});
+    my $releases = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => 6, category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'});
     my $news = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => 4, category => 'news', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date', page => $page});
     template 'news', { adhoc_stylesheet => 'blog', 
                        releases => $releases->{'to_view'},
