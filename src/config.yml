@@ -19,11 +19,12 @@ charset: "UTF-8"
 # template_toolkit: TT
 
 
-
-template: "template_toolkit"
 engines:
-    template_toolkit:
-        ENCODING: utf8
+    template:
+        template_toolkit:
+            ENCODING: utf8
+            DEFAULT: 'no.tt'
+template: "template_toolkit"
 
 # template: "template_toolkit"
 # engines:
@@ -33,6 +34,12 @@ engines:
 #       end_tag:   '%>'
 
 Strehler:
+    default_entity: markdown
     languages: ['en']
     default_language: 'en'
     timezone: 'Europe/Rome'
+    extra_menu:
+        markdown:
+            label: markdown
+            class: StrehlerSite::Element::MarkdownArticle
+            visible: 0

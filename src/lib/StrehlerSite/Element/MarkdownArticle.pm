@@ -5,6 +5,11 @@ use Text::Markdown 'markdown';
 
 extends 'Strehler::Element::Article';
 
+sub item_type
+{
+    return 'markdown';
+}
+
 sub text
 {
     my $self = shift;

@@ -1,5 +1,6 @@
 package StrehlerSite;
 use Dancer2;
+use Strehler::Dancer2::Plugin::EX;
 use StrehlerSite::Element::MarkdownArticle;
 
 our $VERSION = '1.0';
@@ -11,30 +12,17 @@ hook before_template_render => sub {
         $tokens->{'google_monitor'} = config->{'google_monitor'};
     };
 
-get '/' => sub {
-    my $news = StrehlerSite::Element::MarkdownArticle->get_last_by_date('news', 'en');
-    my %news_data = ();
-    if($news)
-    {
-        %news_data = $news->get_ext_data('en');
-    }
-    my $release = StrehlerSite::Element::MarkdownArticle->get_last_by_date('releases', 'en');
-    my %release_data = ();
-    if($release)
-    {
-        %release_data = $release->get_ext_data('en');
-    }
-    template 'index', { adhoc_stylesheet => 'homepage', 
-                        news => \%news_data,
-                        release => \%release_data,
-                        page_title => "Strehler CMS - A light-weight, nerdy, smart CMS in perl based on Perl Dancer2 framework",
-                        page_description => "Design your sites with Perl Dancer2 Framework and add to them a user friendly backend with no effort"
-                };
-};
+latest_page '/', 'index', { news => { category => 'news' }, release => { category => 'releases' }},
+    { adhoc_stylesheet => 'homepage', 
+      page_title => "Strehler CMS - A light-weight, nerdy, smart CMS in perl based on Perl Dancer2 framework",
+      page_description => "Design your sites with Perl Dancer2 Framework and add to them a user friendly backend with no effort"
+    };
+
 get '/about' => sub {
     template 'about', { page_title => "Strehler CMS - What is it?",
                         page_description => "A briefly description of Strehler and what it will do to you after installation" };
 };
+
 get '/news' => sub {
     my $page = params->{page} || 1;
     my $releases = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => 6, category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'});
@@ -48,12 +36,11 @@ get '/news' => sub {
                        page_description => "Latest news about Strehler development"
                      };
 };
-get '/todo' => sub {
-    my $todo = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => -1, category => 'todo', language => 'en', ext => 1, published => 1, order => 'asc', order_by => 'display_order'});
-    template 'todo', { todo => $todo->{'to_view'},
-                       page_title => "Strehler CMS - TODO",
-                       page_description => "All the evolutions that still need work. Collaborate!" };
-};
+
+list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => 'asc' }, 
+    { page_title => "Strehler CMS - TODO", 
+      page_description => "All the evolutions that still need work. Collaborate!" };
+
 get '/users-manual' => sub {
     template 'underconstruction', 
              { adhoc_stylesheet => 'homepage', 
