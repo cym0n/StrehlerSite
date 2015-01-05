@@ -1,3 +1,8 @@
 #footer {
     padding: 8px 0;
 }
+
+.panel
+{
+    border-right: 4px solid #F2615C;
+}
