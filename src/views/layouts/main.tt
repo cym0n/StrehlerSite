@@ -31,12 +31,12 @@
 </head>
 <body>
 <div class="row">	
-		<div class="four columns">
+		<div class="three columns">
 			<div class="logo">
 				<a href="/"><h4>Strehler CMS</h4></a>
 			</div>
 		</div>
-		<div class="eight  columns noleftmarg">		
+		<div class="nine  columns noleftmarg">		
 			<nav id="nav-wrap">
 				<ul class="nav-bar sf-menu">
 				
