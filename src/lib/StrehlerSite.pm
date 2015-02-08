@@ -41,14 +41,15 @@ list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => '
     { page_title => "Strehler CMS - TODO", 
       page_description => "All the evolutions that still need work. Collaborate!" };
 
+list '/other-projects', 'others', { category => 'other-projects', 'entries-per-page' => -1, order => 'asc' }, 
+    { page_title => "Strehler CMS - Other projects", 
+      page_description => "Other projects related to Strehler" };
+
 get '/users-manual' => sub {
-    template 'underconstruction', 
+    template 'user-manual-home', 
              { adhoc_stylesheet => 'homepage', 
-               sitecolor => 'yellow',
-               title => "USER'S MANUAL",
-               subtitle => 'See it on GitHub Wiki <a href="https://github.com/cym0n/strehler/wiki/interface">here</a>',
                page_title => "Strehler CMS - User's manual",
-               page_description => "This page is under construction"  };
+               page_description => "Learn here tips about editing and content management"  };
 };
 get '/tech-manual' => sub {
     template 'underconstruction', 
