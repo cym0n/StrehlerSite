@@ -43,3 +43,20 @@ Strehler:
             label: markdown
             class: StrehlerSite::Element::MarkdownArticle
             visible: 0
+    dashboard_active: 1
+    dashboard:
+        - type: list
+          title: "News"
+          category: news
+        - type: list
+          title: "Releases"
+          category: releases
+        - type: list
+          title: "TODO"
+          category: todo
+          by: order
+        - type: list
+          title: "Other Projects"
+          category: other-projects
+          by: order
+        

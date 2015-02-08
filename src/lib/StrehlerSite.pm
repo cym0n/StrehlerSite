@@ -41,6 +41,10 @@ list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => '
     { page_title => "Strehler CMS - TODO", 
       page_description => "All the evolutions that still need work. Collaborate!" };
 
+list '/other-projects', 'others', { category => 'other-projects', 'entries-per-page' => -1, order => 'asc' }, 
+    { page_title => "Strehler CMS - Other projects", 
+      page_description => "Other projects related to Strehler" };
+
 get '/users-manual' => sub {
     template 'underconstruction', 
              { adhoc_stylesheet => 'homepage', 
