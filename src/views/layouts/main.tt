@@ -62,7 +62,12 @@
 					
 					<li>
 					    <a href="/todo">TODO</a>
+        			</li>
+            
+                    <li>
+					    <a href="/other-projects">Other Projects</a>
 					</li>
+
 					
 				</ul>
 			</nav>
