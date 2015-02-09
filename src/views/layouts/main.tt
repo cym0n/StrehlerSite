@@ -13,17 +13,17 @@
 <title>[% page_title %]</title>
 <meta name="description" content="[% page_description %]">
 <!-- Included CSS Files-->
-<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/style.css">
 [% IF adhoc_stylesheet %]
-<link rel="stylesheet" href="stylesheets/[% adhoc_stylesheet %].css"><!-- homepage stylesheet -->
+<link rel="stylesheet" href="/stylesheets/[% adhoc_stylesheet %].css"><!-- homepage stylesheet -->
 [% END %]
 [% IF sitecolor %]
-<link rel="stylesheet" href="stylesheets/skins/[% sitecolor %].css"><!-- skin color -->
+<link rel="stylesheet" href="/stylesheets/skins/[% sitecolor %].css"><!-- skin color -->
 [% ELSE %]
-<link rel="stylesheet" href="stylesheets/skins/red.css"><!-- skin color -->
+<link rel="stylesheet" href="/stylesheets/skins/red.css"><!-- skin color -->
 [% END %]
-<link rel="stylesheet" href="stylesheets/responsive.css">
-<link rel="stylesheet" href="stylesheets/custom.css">
+<link rel="stylesheet" href="/stylesheets/responsive.css">
+<link rel="stylesheet" href="/stylesheets/custom.css">
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,18 +95,18 @@
 <!-- JAVASCRIPTS 
 ================================================== -->
 <!-- Javascript files placed here for faster loading -->
-<script src="javascripts/foundation.min.js"></script> 
-<script src="javascripts/jquery.carouFredSel-6.0.5-packed.js"></script>
-<script src="javascripts/jquery.cycle.js"></script>
-<script src="javascripts/app.js"></script>
-<script src="javascripts/modernizr.foundation.js"></script>
-<script src="javascripts/slidepanel.js"></script>
-<script src="javascripts/scrolltotop.js"></script>
-<script src="javascripts/hoverIntent.js"></script>
-<script src="javascripts/superfish.js"></script>
-<script src="javascripts/responsivemenu.js"></script>
-<script src="javascripts/jquery.tweet.js"></script>
-<script src="javascripts/twitterusername.js"></script>
+<script src="/javascripts/foundation.min.js"></script> 
+<script src="/javascripts/jquery.carouFredSel-6.0.5-packed.js"></script>
+<script src="/javascripts/jquery.cycle.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/modernizr.foundation.js"></script>
+<script src="/javascripts/slidepanel.js"></script>
+<script src="/javascripts/scrolltotop.js"></script>
+<script src="/javascripts/hoverIntent.js"></script>
+<script src="/javascripts/superfish.js"></script>
+<script src="/javascripts/responsivemenu.js"></script>
+<script src="/javascripts/jquery.tweet.js"></script>
+<script src="/javascripts/twitterusername.js"></script>
 [% IF google_monitor %]
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

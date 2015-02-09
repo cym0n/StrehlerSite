@@ -1,0 +1,46 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 USER MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>Table of contents</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="seven columns">
+    <p>Strehler backend interface is designed as simple as possible.</p>
+    <p>Content management on Strehler can be described as a very standard CRUD model with some important add-ons like categories and tags.</p>
+    <p>It's important to understand that the Strehler backend user is not necessarily the Strehler developer. Strehler backend user could have very few informations about Strehler architecture, but this shouldn't prevent him from managing contenst.</p>
+    <p>Here is a briefly description of basic concepts of the Strehler backend.</p>
+    <img class="ten columns" src="/images/console.jpg" />
+    </div>
+    <div class="five columns">
+        <h3><a href="/users-manual/entities">Common entities</a></h3>
+        <h4><a href="/users-manual/entities#article">Articles</a></h4>
+        <h4><a href="/users-manual/entities#image">Images</a></h4>
+<div class="hr">
+</div>
+        
+        <h3><a href="#">Category management</a></h3>
+<div class="hr">
+</div>
+
+        <h3><a href="#">Dashboard</a></h3>
+        <h4><a href="#">List element</a></h4>
+        <h4><a href="#">Page element</a></h4>
+<div class="hr">
+</div>
+
+        <h3><a href="#">Users</a></h3>
+    </div>
+</div>

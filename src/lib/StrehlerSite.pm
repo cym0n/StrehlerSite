@@ -51,6 +51,15 @@ get '/users-manual' => sub {
                page_title => "Strehler CMS - User's manual",
                page_description => "Learn here tips about editing and content management"  };
 };
+get '/users-manual/entities' => sub {
+    template 'user-manual-entities', 
+             { adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - User's manual - Entities",
+               page_description => "How to create contents"  };
+};
+
+
+
 get '/tech-manual' => sub {
     template 'underconstruction', 
              { adhoc_stylesheet => 'homepage', 
