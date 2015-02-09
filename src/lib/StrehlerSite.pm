@@ -1,7 +1,7 @@
 package StrehlerSite;
 use Dancer2;
 use Strehler::Dancer2::Plugin::EX;
-use StrehlerSite::Element::MarkdownArticle;
+use Strehler::Element::Extra::Chapter;
 
 our $VERSION = '1.0';
 
@@ -25,8 +25,8 @@ get '/about' => sub {
 
 get '/news' => sub {
     my $page = params->{page} || 1;
-    my $releases = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => 6, category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'});
-    my $news = StrehlerSite::Element::MarkdownArticle->get_list({ entries_per_page => 4, category => 'news', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date', page => $page});
+    my $releases = Strehler::Element::Extra::Chapter->get_list({ entries_per_page => 6, category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'});
+    my $news = Strehler::Element::Extra::Chapter->get_list({ entries_per_page => 4, category => 'news', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date', page => $page});
     template 'news', { adhoc_stylesheet => 'blog', 
                        releases => $releases->{'to_view'},
                        news => $news->{'to_view'},
