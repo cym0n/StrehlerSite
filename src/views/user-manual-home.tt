@@ -28,19 +28,19 @@
         <h3><a href="/users-manual/entities">Common entities</a></h3>
         <h4><a href="/users-manual/entities#article">Articles</a></h4>
         <h4><a href="/users-manual/entities#image">Images</a></h4>
-<div class="hr">
-</div>
-        
+        <div class="hr">
+        </div>
+        <h3><a href="/users-manual/list">List view</a></h3>
+        <div class="hr">
+        </div>
         <h3><a href="#">Category management</a></h3>
-<div class="hr">
-</div>
-
+        <div class="hr">
+        </div>
         <h3><a href="#">Dashboard</a></h3>
         <h4><a href="#">List element</a></h4>
         <h4><a href="#">Page element</a></h4>
-<div class="hr">
-</div>
-
+        <div class="hr">
+        </div>
         <h3><a href="#">Users</a></h3>
     </div>
 </div>

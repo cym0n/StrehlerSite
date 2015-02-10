@@ -1,0 +1,35 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 USER MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>List view</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+    <p>Clicking on the tab dedicated to an entity a list page is displayed, containing all the contents created for the entity. Clicking on the column headers the list can be ordered. Default order is by ID, descendant.</p>
+    <p>Elements can be filtered by category</p>
+    <img src="/images/filter.png" />
+    <p>Or searched through search box</p>
+    <img src="/images/search.png" />
+    <p>Every element of the list has a couple of buttons dedicated to it. Edit and delete are self-explained commands. Online/Offline button is available only for <em>publishable</em> contents and change the status of the element. This way you can create many contents and decide to put them online on a second time.</p>
+    <img src="/images/buttons.png" />
+</div> 
+    
+
+
+
+
+    </div>
+</div>

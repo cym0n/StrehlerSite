@@ -57,7 +57,12 @@ get '/users-manual/entities' => sub {
                page_title => "Strehler CMS - User's manual - Entities",
                page_description => "How to create contents"  };
 };
-
+get '/users-manual/list' => sub {
+    template 'user-manual-list', 
+             { adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - User's manual - List",
+               page_description => "Page that list all contents"  };
+};
 
 
 get '/tech-manual' => sub {
