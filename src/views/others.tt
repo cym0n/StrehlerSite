@@ -1,0 +1,24 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 OTHER PROJECTS
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+        Here you can find all the other CPAN packages related to Strehler.
+    </div>
+</div>
+[% FOREACH t in elements %]
+<div class="row">
+    <div class="twelve columns">
+        <h4>[% t.title %]</h4>
+        [% t.text %]
+    </div>
+</div>
+[% END %]
