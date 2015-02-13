@@ -29,7 +29,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->    
 </head>
-<body>
+<body [% IF adhoc_class %]class="[% adhoc_class %]"[% END %]>
 <div class="row">	
 		<div class="three columns">
 			<div class="logo">

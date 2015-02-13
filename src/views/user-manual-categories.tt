@@ -28,7 +28,7 @@
         <p>Using this, you just have to decide a category name and, eventually, a parent.</a>
     </div>
     <div class="nine columns">
-        <p>Categories (for now) can be structured just on two levels. You can use any character for their name, only '/' is excluded, considered as a reserved character.</p>
+        <p>Categories (for now) can be structured only on two levels. You can use any character for their name, only '/' is excluded, considered as a reserved character.</p>
     </div>
     <div class="twelve columns">
     <div class="row">

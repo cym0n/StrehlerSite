@@ -53,21 +53,31 @@ get '/users-manual' => sub {
 };
 get '/users-manual/entities' => sub {
     template 'user-manual-entities', 
-             { adhoc_stylesheet => 'homepage', 
+             { adhoc_class => 'user-manual',
+               adhoc_stylesheet => 'homepage', 
                page_title => "Strehler CMS - User's manual - Entities",
                page_description => "How to create contents"  };
 };
 get '/users-manual/list' => sub {
     template 'user-manual-list', 
-             { adhoc_stylesheet => 'homepage', 
+             { adhoc_class => 'user-manual',
+               adhoc_stylesheet => 'homepage', 
                page_title => "Strehler CMS - User's manual - List",
                page_description => "Page that list all contents"  };
 };
 get '/users-manual/categories' => sub {
     template 'user-manual-categories', 
-             { adhoc_stylesheet => 'homepage', 
+             { adhoc_class => 'user-manual',
+               adhoc_stylesheet => 'homepage', 
                page_title => "Strehler CMS - User's manual - Categories",
                page_description => "Categories management"  };
+};
+get '/users-manual/dashboard' => sub {
+    template 'user-manual-dashboard', 
+             { adhoc_class => 'user-manual',
+               adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - User's manual - Dashboard",
+               page_description => "How to use the Dashboard"  };
 };
 
 

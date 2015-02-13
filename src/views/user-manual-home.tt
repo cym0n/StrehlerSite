@@ -36,9 +36,10 @@
         <h3><a href="/users-manual/categories">Category management</a></h3>
         <div class="hr">
         </div>
-        <h3><a href="#">Dashboard</a></h3>
-        <h4><a href="#">List element</a></h4>
-        <h4><a href="#">Page element</a></h4>
+        <h3><a href="/users-manual/dashboard">Dashboard</a></h3>
+        <h4><a href="/users-manual/dashboard#list">List block</a></h4>
+        <h4><a href="/users-manual/dashboard#page">Page block</a></h4>
+        <h4><a href="/users-manual/dashboard#links">Links block</a></h4>
         <div class="hr">
         </div>
         <h3><a href="#">Users</a></h3>

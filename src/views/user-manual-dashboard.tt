@@ -1,0 +1,81 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 USER MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>Dashboard</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>Dashboard is a facultative part of Strehler structure, so you will not necessary see it. If it's active, homepage is changed in a series of boxes with informations about Dashboard blocks and quick-link for editing and management.</p>
+        <p>There's a dashboard for every managed language.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a name="list"><h5>List block</h5></a>
+    </div>
+</div>
+<div class="row">
+    <div class="six columns">
+        <img src="/images/list-block.png">
+    </div>
+    <div class="six columns">
+        <p>A list block is used to manage a bunch of contents created for the same reason, as many articles of a blog, chapters of a book or images in a gallery.</p>
+        <p>All the elements of a list box are grouped in a specific category. In the box is also displayed  how many contents are and how many of them are online.</p>
+        <p>Left button leads to the list view of the entity, filtered by block category. Right button gives the edit page where category is populated with block category. It's populated also date/display_order field, considering configured ordering criteria.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a name="page"><h5>Page block</h5></a>
+    </div>
+</div>
+<div class="row">
+    <div class="six columns">
+        <img src="/images/page-block.png">
+    </div>
+    <div class="six columns">
+        <p>A single site page could be composed by many content. Probably you need just to display one of these content and you have no interest in having all of the available.</p>
+        <p>A good example for this is an homepage with many boxes that describe the purpose of the site, a logo image and a banner.</p>
+        <p>Page block manages this situation. In a page you can have one and just one content, but Strehler will still allow you to store many of them in the related category. Page block use them as versioned contents. Only the latest online one will be seen, all the other will remain as archive, reachable by the editor.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>The edit button open an overylay where all the sections of the page are a listed. Every section has a category.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="seven columns">
+        <img src="/images/dashboard-page-edit.png">
+    </div>
+    <div class="five columns">
+        <p>Section 1 has no published content, but one was created. You can edit or publish it.</p>
+        <p>Section 2 has a publised content that you can edit. If you want to create a new version of it, keeping it online, you can create a new draft.</p>
+        <p>No content is present in section 3 so you can just create a new draft</p>
+        <p>Block gives back OK only if there's an online content for every section of the page. Populated sections are displayed.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a name="links"><h5>Links block</h5></a>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>This box is just a collection of generic link you can click.</p>
+    </div>
+</div>
+
