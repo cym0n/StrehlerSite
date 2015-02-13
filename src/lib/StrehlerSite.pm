@@ -63,6 +63,13 @@ get '/users-manual/list' => sub {
                page_title => "Strehler CMS - User's manual - List",
                page_description => "Page that list all contents"  };
 };
+get '/users-manual/categories' => sub {
+    template 'user-manual-categories', 
+             { adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - User's manual - Categories",
+               page_description => "Categories management"  };
+};
+
 
 
 get '/tech-manual' => sub {

@@ -1,0 +1,48 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 USER MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>Categories</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>While Articles and Images can be easly associated to a database table as contents, categories, in Strehler structure, have a very different role. They are used to organize contents and help the editor to do its work.</p>
+        <p>Many Strehle API that you can use to define your frontend are category based, categories are the way you define what go where.</p>
+        <p>Pay attention! In this section we will not take about  hot you should categorize your contents, because this is somethig left to site architect to decide. Here we'll talk just about creating categories and use it.</p>
+    </div>
+    <div class="twelve columns">
+        <p>Categories has a tab that only the Admin can see. On top of its list page there's a form for quick creation.</p>
+        <img src="/images/category-fast.png" />
+        <p>Using this, you just have to decide a category name and, eventually, a parent.</a>
+    </div>
+    <div class="nine columns">
+        <p>Categories (for now) can be structured just on two levels. You can use any character for their name, only '/' is excluded, considered as a reserved character.</p>
+    </div>
+    <div class="twelve columns">
+    <div class="row">
+        <div class="eight columns">
+            <p>Complete form for category creation allow you to define also the tags related to an entity. Defining tags, every time you'll select the related category tags text box will change in a bunch of checkbox, allowing the user to use just pre-configured values. You can use this feature to manage &quot;flags&quot; you want to add to your content definition.</p>
+            <p>You can define tags for each entity, but if you write something in the &quot;All&quot; box that definition will override any other. Tags must be inserted separated by commas. Default should be just one of the elements defined in the tags field. If it isn't, default will not work.</p>
+        </div>
+        <div class="four columns">
+            <img src="/images/category-tags.png" />
+        </div>
+    </div>
+    </div>
+    <div class="twelve columns">
+        <p>To see how categories are used go to the <a href="/users-manual/entities">common entities</a> section.</p>
+    </div>
+</div>
+        
