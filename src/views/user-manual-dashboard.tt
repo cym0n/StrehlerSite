@@ -63,9 +63,9 @@
     </div>
     <div class="five columns">
         <p>Section 1 has no published content, but one was created. You can edit or publish it.</p>
-        <p>Section 2 has a publised content that you can edit. If you want to create a new version of it, keeping it online, you can create a new draft.</p>
+        <p>Section 2 has a published content that you can edit. If you want to create a new version of it, keeping it online, you can create a new draft.</p>
         <p>No content is present in section 3 so you can just create a new draft</p>
-        <p>Block gives back OK only if there's an online content for every section of the page. Populated sections are displayed.</p>
+        <p>Block gives status OK only if there's an online content for every section of the page. Populated sections counter is displayed.</p>
     </div>
 </div>
 <div class="row">

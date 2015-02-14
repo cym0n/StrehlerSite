@@ -1,0 +1,28 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 USER MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>Users</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>Strehler's Users tab manage the users that can access backend.</p>
+        <p>Two profiles are available: administrator and editor. Strehler architect can decide what a profile can see through entities configuration. In standard configuration administrator can do all while editor can just manipulate articles ad images. What remains under exclusive administrator control are categories and users.</p>
+        <p>Administrator has also access to system logs, where he can see all the activities done in the backend.</p>
+        <p>Users can be created as any other entity by the administrator, through a simple and self-explained form.</p>
+        <img src="/images/users.png" />
+        <p>Remember! Don't delete admin user, because it's the only one whose password can be reset by command-line!</p>
+    </div>
+</div>

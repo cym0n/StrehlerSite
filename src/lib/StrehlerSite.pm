@@ -79,6 +79,14 @@ get '/users-manual/dashboard' => sub {
                page_title => "Strehler CMS - User's manual - Dashboard",
                page_description => "How to use the Dashboard"  };
 };
+get '/users-manual/users' => sub {
+    template 'user-manual-users', 
+             { adhoc_class => 'user-manual',
+               adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - User's manual - Users",
+               page_description => "Users management"  };
+};
+
 
 
 
