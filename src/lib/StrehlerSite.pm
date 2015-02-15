@@ -16,7 +16,8 @@ hook before_template_render => sub {
 latest_page '/', 'index', { news => { category => 'news' }, release => { category => 'releases' }},
     { adhoc_stylesheet => 'homepage', 
       page_title => "Strehler CMS - A light-weight, nerdy, smart CMS in perl based on Perl Dancer2 framework",
-      page_description => "Design your sites with Perl Dancer2 Framework and add to them a user friendly backend with no effort"
+      page_description => "Design your sites with Perl Dancer2 Framework and add to them a user friendly backend with no effort",
+      disqus => 1
     };
 
 get '/about' => sub {

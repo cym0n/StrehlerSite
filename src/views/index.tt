@@ -121,6 +121,8 @@
                 <h5>[% news.publish_date.strftime('%d-%m-%Y') %]</h5>
                 [% news.text %]
                 <p class="text-right">
+                <span class="disqus-comment-count" data-disqus-url="http://[% DOMAIN %]/news/[% news.slug %]#disqus_thread">Comments..</span> <br />
+                <a href="/news/[% news.slug %]" class="readmore">Comment</a>
 	   	        <a href="/news" class="readmore">See all news</a>
 	            </p>
             </div>
