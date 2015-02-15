@@ -10,8 +10,13 @@
 <meta charset="utf-8"/>
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width"/>
+[% IF slugged %]
+<title>Strehler CMS - News - [% element.title %]</title>
+<meta name="description" content="[% element.incipit %]">
+[% ELSE %]
 <title>[% page_title %]</title>
 <meta name="description" content="[% page_description %]">
+[% END %]
 <!-- Included CSS Files-->
 <link rel="stylesheet" href="/stylesheets/style.css">
 [% IF adhoc_stylesheet %]

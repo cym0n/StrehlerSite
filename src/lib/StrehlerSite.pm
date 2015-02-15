@@ -22,6 +22,12 @@ get '/about' => sub {
     template 'about', { page_title => "Strehler CMS - What is it?",
                         page_description => "A briefly description of Strehler and what it will do to you after installation" };
 };
+slug  '/news/:slug', 'news-post', { 'item-type' => 'markdown', category => 'news' }, 
+                                  { adhoc_stylesheet => 'blog', 
+                                    slugged => 1
+                                  };;
+
+
 
 get '/news' => sub {
     my $page = params->{page} || 1;
@@ -36,6 +42,7 @@ get '/news' => sub {
                        page_description => "Latest news about Strehler development"
                      };
 };
+
 
 list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => 'asc' }, 
     { page_title => "Strehler CMS - TODO", 

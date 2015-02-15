@@ -22,6 +22,7 @@
 			 <div class="dots blogdots">
 			 </div>
              [% n.text %]
+             <div> <p class="text-right"><a href="/news/[% n.slug %]">Go to comments</a></p></div>
              <div class="hr">
 			 </div>
              [% END %]
