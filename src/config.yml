@@ -33,6 +33,8 @@ template: "template_toolkit"
 #       start_tag: '<%'
 #       end_tag:   '%>'
 
+domain: "www.strehler-cms.org"
+
 Strehler:
     default_entity: markdown
     languages: ['en']

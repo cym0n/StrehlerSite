@@ -10,6 +10,7 @@ set layout => 'main';
 hook before_template_render => sub {
         my $tokens = shift;
         $tokens->{'google_monitor'} = config->{'google_monitor'};
+        $tokens->{'DOMAIN'} = config->{'domain'};
     };
 
 latest_page '/', 'index', { news => { category => 'news' }, release => { category => 'releases' }},
@@ -39,7 +40,8 @@ get '/news' => sub {
                        page => $page,
                        last_page => $news->{'last_page'},
                        page_title => "Strehler CMS - News",
-                       page_description => "Latest news about Strehler development"
+                       page_description => "Latest news about Strehler development",
+                       disqus => 1
                      };
 };
 

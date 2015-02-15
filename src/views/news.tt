@@ -22,7 +22,10 @@
 			 <div class="dots blogdots">
 			 </div>
              [% n.text %]
-             <div> <p class="text-right"><a href="/news/[% n.slug %]">Go to comments</a></p></div>
+             <div>
+                <p class="text-right">
+                <span class="disqus-comment-count" data-disqus-url="http://[% DOMAIN %]/news/[% n.slug %]#disqus_thread">Comments..</span></br />
+                <a href="/news/[% n.slug %]">Go to comments</a></p></div>
              <div class="hr">
 			 </div>
              [% END %]
