@@ -97,18 +97,16 @@ get '/users-manual/users' => sub {
                page_description => "Users management"  };
 };
 
-
-
-
 get '/tech-manual' => sub {
-    template 'underconstruction', 
-             { adhoc_stylesheet => 'homepage', 
-               sitecolor => 'yellow',
-               title => "TECH MANUAL",
-               subtitle => 'Find many hints about developing with Strehler on the <a href="https://github.com/cym0n/strehler/wiki">GitHub Wiki</a>',
-               page_title => "Strehler CMS - Tech Manual",
-               page_description => "This page is under construction" };
+    template 'tech-manual-home', 
+             { adhoc_class => 'tech-manual',
+               adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - Tech manual",
+               page_description => "A guide for developers that want to work with Strehler!"  };
 };
+
+
+
 
 
 true;

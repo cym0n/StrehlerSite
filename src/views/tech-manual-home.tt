@@ -1,0 +1,30 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 TECH MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>Table of contents</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="seven columns">
+        <p>In this section of the site you'll find articles about Strehler from the point of view of the developer.</p>
+        <p>Strehler makes life easier, but it's intended to be used by a developer, someone with perl and Dancer2 knowledge. We'll spend very few words about Dancer2, for any question about it please refer to <a href="http://search.cpan.org/dist/Dancer2/">its documentation on CPAN</a> or <a href="http://perldancer.org/">its site</a>.</p>
+        <p>Here we'll talk about building a site based on Strehler backand and also about improve Strehler itself with new features and entities.</p>
+        <p>Tech manual section is still a work in progress, we'll add more articles in the future!</p>
+        <img class="ten columns" src="/images/forge.jpg" />
+    </div>
+    <div class="five columns">
+        <h3><a href="/users-manual/entities">The Strehler Site - A tutorial</a></h3>
+    </div>
+</div>
