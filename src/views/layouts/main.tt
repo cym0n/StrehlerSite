@@ -36,12 +36,12 @@
 </head>
 <body [% IF adhoc_class %]class="[% adhoc_class %]"[% END %]>
 <div class="row">	
-		<div class="three columns">
+		<div class="two columns">
 			<div class="logo">
 				<a href="/"><h4>Strehler CMS</h4></a>
 			</div>
 		</div>
-		<div class="nine  columns noleftmarg">		
+		<div class="ten columns noleftmarg">		
 			<nav id="nav-wrap">
 				<ul class="nav-bar sf-menu">
 				
@@ -71,6 +71,10 @@
             
                     <li>
 					    <a href="/other-projects">Other Projects</a>
+					</li>
+
+                    <li>
+                    <a target="_blank" href="http://demo.strehler-cms.org">DEMO</a>
 					</li>
 
 					
