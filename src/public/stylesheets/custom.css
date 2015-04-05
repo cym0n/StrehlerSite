@@ -16,3 +16,26 @@
 .user-manual img {
     border: 1px solid #bdbdbd;
 }
+.code {
+    background-color: #EEEEEE;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+.code-indent1
+{
+    padding-left: 20px;
+}
+.code-indent2
+{
+    padding-left: 40px;
+}
+.code-indent3
+{
+    padding-left: 60px;
+}

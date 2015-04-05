@@ -25,6 +25,7 @@
         <img class="ten columns" src="/images/forge.jpg" />
     </div>
     <div class="five columns">
-        <h3><a href="/users-manual/entities">The Strehler Site - A tutorial</a></h3>
+        <h3><a href="/tech-manual/strehler-site-1">The Strehler Site - A tutorial</a></h3>
+        <p>This tutorial is about the very site where you're now and how it was built. Strehler site is very easy as structure, but it uses a lot of Strehler concept so it can be quite interesting analyse it.</p>
     </div>
 </div>

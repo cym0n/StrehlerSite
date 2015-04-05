@@ -104,6 +104,20 @@ get '/tech-manual' => sub {
                page_title => "Strehler CMS - Tech manual",
                page_description => "A guide for developers that want to work with Strehler!"  };
 };
+get '/tech-manual/strehler-site-1' => sub {
+    template 'tech-manual-strehler-site-1', 
+             { adhoc_class => 'tech-manual',
+               adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - Tech manual - The Strehler site Tutorial 1/2",
+               page_description => "How Strehler site was built step by step - part 1"  };
+};
+get '/tech-manual/strehler-site-2' => sub {
+    template 'tech-manual-strehler-site-2', 
+             { adhoc_class => 'tech-manual',
+               adhoc_stylesheet => 'homepage', 
+               page_title => "Strehler CMS - Tech manual - The Strehler site Tutorial 2/2",
+               page_description => "How Strehler site was built step by step - part 2"  };
+};
 
 
 

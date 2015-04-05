@@ -1,0 +1,141 @@
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 TECH MANUAL
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+		<div class="sectiontitle">
+			<h4>The Strehler Site Tutorial 1/2</h4>
+		</div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>For this tutorial consider a site where all the &quot;bootstrap procedure&quot; described <a target="_blank" href="http://search.cpan.org/dist/Strehler/lib/Strehler/Manual/Installation.pod">here</a> is already done. So, you have a complete and working Dancer2 site with a database and a Strehler backend up and running.</p>
+        <p>We will not talk about HTML and javascript, we'll work as &quot;someone else&quot; is working on templates and we just have to use them</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a name="todopage"><h5>TODO page</h5></a>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>
+        We'll start from the <a href="/todo">TODO page</a> because it's one of the simplest in the site (<a href="/other-projects">Other Projects page</a> is created the same way).</p>
+        <p>
+        On Strehler backend we just have to create a &quot;todo&quot; category. We can do it using the quick form on top of categories page</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <img src="/images/create-todo.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>
+            We can instead use a <strong>categories.txt</strong> file to run with <strong>strehler categories</strong>. For now, in the file we just need a line for the todo category.
+        </p>
+        <p class="code">
+        todo</br>
+        other-projects
+        </p>
+        <p>
+            (We added also the &quot;other-projects&quot; category because the development of that page is the same.)
+        </p>
+        <p>
+            To add something on the todo page we just have to add an Article to the todo category and publish it. On the frontend, the article will be managed using the <strong>Chapter Entity</strong> that is part of hte <a target="_blank" href="http://search.cpan.org/~cymon/Strehler-Element-Extra/">Strehler::Element::Extra</a> package. Install it in your repository to CPAN and then register it on your <strong>config.yml</strong>.
+        </p>
+        <p class="code">
+        Strehler:<br />
+        <span class="code-indent1">languages: ['en']<br /></span>
+        <span class="code-indent1">default_language: 'en'<br /></span>
+        <span class="code-indent1">timezone: 'Europe/Rome'<br /></span>
+        <span class="code-indent1">default_entity: markdown<br /></span>
+        <span class="code-indent1">extra_menu:<br /></span>
+        <span class="code-indent2">markdown:<br /></span>
+        <span class="code-indent3">label: markdown<br /></span>
+        <span class="code-indent3">class: Strehler::Element::Extra::Chapter<br /></span>
+        <span class="code-indent3">visible: 0<br /></span>
+        </p>
+        <p>Here we configured markdown entity as the default entity and we linked it to the right class (Strehler::Element::Extra::Chapter). The flag visible to 0 will hide it on the topbar of the backend menu, because we'll go on using the Article management there.
+        <p>Now it's time to manage the route, using the <a href="http://search.cpan.org/dist/Strehler/lib/Strehler/Dancer2/Plugin/EX.pm">EX Plugin</a>. In this case we are talking about a standard <a href="http://search.cpan.org/dist/Strehler/lib/Strehler/Dancer2/Plugin/EX.pm#LIST">list page</a>, because we just want to display all the contents of a category, so route is just configuration.</p>
+        <p class="code">
+        list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => 'asc' }; 
+        </p>
+        <p> <strong>/todo</strong> is the route that will be used, the second <strong>todo</strong> the template, the third parameter is an hash with all the EX configurations needed here.</p>
+        <p>Many paremeters are used with their default value so they're not displayed. For example, we chose to use <strong>display_order</strong> for ordering and entity is not configured because we put markdown as <strong>default_entity</strong> the step before. <strong>entires-per-page</strong> is set to -1 to make all the contents available displayed.</p>
+        <p>If you go on github to see the <a href="https://github.com/cym0n/StrehlerSite">actual code</a> you'll se many other configurations, related to appearance and SEO, that we'll ignore in this tutorial.</p>
+        <p>Just a word on the todo template. EX Plugin list keyword places all the data retrieved in an array named <strong>elements</strong>. To display the content, in the template, you need to loop on it.</p>
+        <p class="code">
+        [% TAGS [- -] %]
+        [% FOREACH t in elements %]<br />
+        &lt;div class="row"&gt;<br />
+        <span class="code-indent1">&lt;div class="twelve columns"&gt;<br /></span>
+            <span class="code-indent2">&lt;h4>[% t.title %]&lt;/h4&gt;<br /></span>
+            <span class="code-indent2">[% t.text %]<br /></span>
+        <span class="code-indent1">&lt;/div&gt;<br /></span>
+        &lt;/div&gt;
+        [% END %]
+        [- TAGS [%  %] -]
+        </p>
+        <p>Every element has the attributes defined by their entity.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a name="goingon"><h5>What's going page</h5></a>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>
+            <a href="/news">What's going on page</a> is a bit more complex page because there're two lists here. One for the news and one for the relaeses. They're again articles that we will manage using Chapter entity and we need two more categories for them.
+        </p>
+        <p class="code">
+            todo</br>
+            other-projects<br />
+            news<br />
+            releases
+        </p>
+        <p>
+            Remember: you can continue to add categories to the categories.txt file and run strehler categories many times on it.
+        </p>
+        <p>
+            There's not a way to manage two lists in a call using the EX Plugin, but you should remember that the EX Plugin is just a wrapper for get_list call. All the documentation on get_list is <a href="http://search.cpan.org/dist/Strehler/lib/Strehler/Element.pod">here</a>, we'll use it in a very plain way. We'll also manage pagination, but only for news. We'll display only the six latest releases in any case.
+        </p>
+        <p class="code">
+            get '/news' => sub {<br />
+            <span class="code-indent1">my $page = params->{page} || 1;<br /></span>
+            <span class="code-indent1">my $releases = Strehler::Element::Extra::Chapter->get_list(<br /></span>
+            <span class="code-indent2">{ entries_per_page => 6, <br /></span>
+            <span class="code-indent2">&nbsp;&nbsp;category => 'releases', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'}<br /></span>
+            <span class="code-indent1">);<br /></span>
+            <span class="code-indent1">my $news = Strehler::Element::Extra::Chapter->get_list(<br /></span>
+            <span class="code-indent2">{ entries_per_page => 4, page => $page, <br /></span>
+            <span class="code-indent2">&nbsp;&nbsp;category => 'news', language => 'en', ext => 1, published => 1, order => 'desc', order_by => 'publish_date'}<br /></span>
+            <span class="code-indent1">);<br /></span>
+            <span class="code-indent1">template 'news', <br /></span>
+            <span class="code-indent2">{ releases => $releases->{'to_view'}, news => $news->{'to_view'}, page => $page, last_page => $news->{'last_page'}}<br /></span>
+            };
+        </p>
+        <p>
+            That's all! You now have two elements: news and releases and you can loop through them in the template to display the data.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <a href="/tech-manual/strehler-site-2">Continue to the second page of the tutorial &gt;&gt;&gt;</a>  
+    </div>
+</div>
+        
