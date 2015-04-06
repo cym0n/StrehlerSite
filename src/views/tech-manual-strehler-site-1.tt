@@ -53,7 +53,7 @@
             (We added also the &quot;other-projects&quot; category because the development of that page is the same.)
         </p>
         <p>
-            To add something on the todo page we just have to add an Article to the todo category and publish it. On the frontend, the article will be managed using the <strong>Chapter Entity</strong> that is part of hte <a target="_blank" href="http://search.cpan.org/~cymon/Strehler-Element-Extra/">Strehler::Element::Extra</a> package. Install it in your repository to CPAN and then register it on your <strong>config.yml</strong>.
+            To add something on the todo page we just have to add an Article to the todo category and publish it. On the frontend, the article will be managed using the <strong>Chapter Entity</strong> that is part of hte <a target="_blank" href="http://search.cpan.org/~cymon/Strehler-Element-Extra/">Strehler::Element::Extra</a> package. Install it in your repository with CPAN and then register it on your <strong>config.yml</strong>.
         </p>
         <p class="code">
         Strehler:<br />
@@ -73,7 +73,7 @@
         list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => 'asc' }; 
         </p>
         <p> <strong>/todo</strong> is the route that will be used, the second <strong>todo</strong> the template, the third parameter is an hash with all the EX configurations needed here.</p>
-        <p>Many paremeters are used with their default value so they're not displayed. For example, we chose to use <strong>display_order</strong> for ordering and entity is not configured because we put markdown as <strong>default_entity</strong> the step before. <strong>entires-per-page</strong> is set to -1 to make all the contents available displayed.</p>
+        <p>Many paremeters are used with their default value so they're not displayed. For example, we chose to use <strong>display_order</strong> for ordering and entity is not configured because we put markdown as <strong>default_entity</strong> the step before. <strong>entires-per-page</strong> is set to -1 to make all the available contents displayed.</p>
         <p>If you go on github to see the <a href="https://github.com/cym0n/StrehlerSite">actual code</a> you'll se many other configurations, related to appearance and SEO, that we'll ignore in this tutorial.</p>
         <p>Just a word on the todo template. EX Plugin list keyword places all the data retrieved in an array named <strong>elements</strong>. To display the content, in the template, you need to loop on it.</p>
         <p class="code">
@@ -88,7 +88,7 @@
         [% END %]
         [- TAGS [%  %] -]
         </p>
-        <p>Every element has the attributes defined by their entity.</p>
+        <p>Every element has the attributes defined by its entity.</p>
     </div>
 </div>
 <div class="row">
