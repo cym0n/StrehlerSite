@@ -2,6 +2,7 @@ package StrehlerSite;
 use Dancer2;
 use Strehler::Dancer2::Plugin::EX;
 use Strehler::Element::Extra::Chapter;
+use Strehler::Element::RSS::RSSChannel;
 
 our $VERSION = '1.0';
 
@@ -17,6 +18,8 @@ latest_page '/', 'index', { news => { category => 'news' }, release => { categor
     { adhoc_stylesheet => 'homepage', 
       page_title => "Strehler CMS - A light-weight, nerdy, smart CMS in perl based on Perl Dancer2 framework",
       page_description => "Design your sites with Perl Dancer2 Framework and add to them a user friendly backend with no effort",
+      rss_release => Strehler::Element::RSS::RSSChannel->get_link("chapter", "releases"),  
+      rss_news => Strehler::Element::RSS::RSSChannel->get_link("chapter", "news"),  
       disqus => 1
     };
 
@@ -24,7 +27,7 @@ get '/about' => sub {
     template 'about', { page_title => "Strehler CMS - What is it?",
                         page_description => "A briefly description of Strehler and what it will do to you after installation" };
 };
-slug  '/news/:slug', 'news-post', { 'item-type' => 'markdown', category => 'news' }, 
+slug  '/news/:slug', 'news-post', { 'item-type' => 'chapter', category => 'news' }, 
                                   { adhoc_stylesheet => 'blog', 
                                     slugged => 1
                                   };;
@@ -42,6 +45,8 @@ get '/news' => sub {
                        last_page => $news->{'last_page'},
                        page_title => "Strehler CMS - News",
                        page_description => "Latest news about Strehler development",
+                       rss_release => Strehler::Element::RSS::RSSChannel->get_link("chapter", "releases"),  
+                       rss_news => Strehler::Element::RSS::RSSChannel->get_link("chapter", "news"),  
                        disqus => 1
                      };
 };

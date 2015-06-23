@@ -36,15 +36,19 @@ template: "template_toolkit"
 domain: "www.strehler-cms.org"
 
 Strehler:
-    default_entity: markdown
+    default_entity: chapter
     languages: ['en']
     default_language: 'en'
     timezone: 'Europe/Rome'
     extra_menu:
-        markdown:
-            label: markdown
+        chapter:
+            label: Chapter
             class: Strehler::Element::Extra::Chapter
             visible: 0
+        rsschannel:
+            label: RSS
+            class: Strehler::Element::RSS::RSSChannel
+            auto: 1
     dashboard_active: 1
     dashboard:
         - type: list

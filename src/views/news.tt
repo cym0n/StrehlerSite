@@ -45,11 +45,18 @@
                 [% END %]
 				<li class="arrow [% IF page == last_page %]unavailable[% END %]"><a href="/news?page=[% page + 1 %]">&raquo;</a></li>
 			</ul>
+            [% IF rss_news %]
+            <a href="[% rss_news %]"><span class="feed feed-news"><img src="/images/rss-icon.png" class="rss-icon" /> RSS Feed for news</span></a></h5>
+            [% END %]
             [% END %]
 		</div>
 		<!-- SIDEBAR -->
 		<div class="four columns">
-        	<h5 class="sidebartitle">RELEASES</h5>
+        	<h5 class="sidebartitle">RELEASES
+            [% IF rss_releases %]
+            <a href="[% rss_news %]"><span class="feed feed-news"><img src="/images/rss-icon.png" class="rss-icon" /> RSS Feed</span></a>
+            [% END %]
+            </h5>
             [% FOREACH r IN releases %]
 			<p>
 				<h6>[% r.publish_date.strftime('%d-%m-%Y') %] - [% r.title %]</h6>
