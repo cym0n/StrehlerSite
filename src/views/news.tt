@@ -53,8 +53,8 @@
 		<!-- SIDEBAR -->
 		<div class="four columns">
         	<h5 class="sidebartitle">RELEASES
-            [% IF rss_releases %]
-            <a href="[% rss_news %]"><span class="feed feed-news"><img src="/images/rss-icon.png" class="rss-icon" /> RSS Feed</span></a>
+            [% IF rss_release %]
+            <a href="[% rss_release %]"><span class="feed feed-news"><img src="/images/rss-icon.png" class="rss-icon" /> RSS Feed</span></a>
             [% END %]
             </h5>
             [% FOREACH r IN releases %]
