@@ -51,6 +51,15 @@ get '/news' => sub {
                      };
 };
 
+get '/releases' => sub {
+    return redirect '/news'
+};
+get '/releases/:slug' => sub {
+    return redirect '/news'
+};
+
+
+
 
 list '/todo', 'todo', { category => 'todo', 'entries-per-page' => -1, order => 'asc' }, 
     { page_title => "Strehler CMS - TODO", 
